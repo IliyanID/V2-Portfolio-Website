@@ -1,0 +1,16 @@
+{
+  "name": "V2-Portfolio-Website",
+  "version": "1.0.0",
+  "description": "V2 of my portfolio website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier-write": "pnpm dlx prettier    --write .",
+    "prettier-check": "pnpm dlx prettier --check . || (echo 'Fix by running 'pnpm run prettier-write' '; false;)"
+  },
+  "keywords": [],
+  "author": "Iliyan Dimitrov",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}

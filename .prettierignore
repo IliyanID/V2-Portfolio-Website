@@ -1,0 +1,11 @@
+sandbox
+**/.terraform/
+**/.serverless/
+**/target/
+**/.venv/
+**/build/
+*.md
+*-lock.yaml
+*-lock.yml
+*-lock.json
+.pnpm-store

@@ -7,15 +7,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
-    - name: Build Frontend
-      run: |
-        cd frontend
-        npm install
-        npm run build
+      - uses: actions/checkout@v2
+      - name: Build Frontend
+        run: ./infra/docker/frontend/build-docker.sh
