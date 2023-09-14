@@ -3,7 +3,9 @@ set -e
 root=$(git rev-parse --show-toplevel)
 
 #Load environment variables
-source ${root}/.env.local
+if( test -f ${root}/.env.local); then
+    source ${root}/.env.local
+fi
 
 docker_image=docker-repo.iliyandimitrov.com/v2-portfolio-website-runner:latest
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
