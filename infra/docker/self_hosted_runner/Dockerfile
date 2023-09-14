@@ -25,7 +25,7 @@ RUN tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
 RUN ./bin/installdependencies.sh
 
 # Configure Runner
-RUN ./config.sh --url https://github.com/IliyanID/Portfolio-Website --token $RUNNER_TOKEN --name "V2 Portfolio Website Runner" -unattended --replace
+RUN ./config.sh --url https://github.com/IliyanID/V2-Portfolio-Website --token $RUNNER_TOKEN --name "V2 Portfolio Website Runner" -unattended --replace
 
 # Cleanup
 RUN rm -rf actions-runner-linux-x64-2.309.0.tar.gz
