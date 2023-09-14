@@ -11,4 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Backend
-        run: ./infra/docker/frontend/build-docker.sh
+        run: |
+          echo "CI CD not implemented for backend"
+          curl ${WEBHOOK_URL} -X GET

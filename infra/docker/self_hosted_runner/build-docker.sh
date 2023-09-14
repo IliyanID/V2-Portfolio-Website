@@ -15,7 +15,8 @@ function check_env() {
     fi
 }
 
-check_env "RUNNER_TOKEN" 
+check_env "RUNNER_TOKEN"
+check_env "WEBHOOK_URL" 
 
 printf "\e[33mBuilding ${docker_image}\e[0m\n"
 

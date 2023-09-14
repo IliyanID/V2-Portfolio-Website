@@ -8,8 +8,10 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    
+
     steps:
       - uses: actions/checkout@v2
       - name: Build Frontend
-        run: ./infra/docker/frontend/build-docker.sh
+        run: |
+          ./infra/docker/frontend/build-docker.sh
+          curl ${WEBHOOK_URL} -X GET
