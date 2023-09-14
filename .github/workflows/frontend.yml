@@ -16,4 +16,4 @@ jobs:
       - name: Build Frontend
         run: |
           cd infra/docker/frontend && ./build-docker.sh
-          curl -k -X POST "${WEBHOOK_URL}"
+          curl -k -X POST "${V2_PORTFOLIO_WEBSITE_WEBHOOK}"
