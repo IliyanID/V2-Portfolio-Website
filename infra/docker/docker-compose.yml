@@ -14,14 +14,6 @@ services:
      
     networks:
       - traefik_default
-
-  self-hosted-runner:
-    image: docker-repo.iliyandimitrov.com/v2-portfolio-website-runner:latest
-    restart: unless-stopped
-    environment:
-      - WEBHOOK_URL=''
-    networks:
-      - traefik_default
 networks:
   traefik_default:
     external: true
