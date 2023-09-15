@@ -5,13 +5,13 @@ services:
     image: docker-repo.iliyandimitrov.com/v2-portfolio-website-ui:latest
     restart: unless-stopped
     labels:
-      - "traefik.enable=true"
+      - 'traefik.enable=true'
 
-      - "traefik.http.routers.v2-portfolio-website.rule=Host(`v2.iliyandimitrov.com`)"
-      - "traefik.http.routers.v2-portfolio-website.entrypoints=websecure"
-      - "traefik.http.routers.v2-portfolio-website.tls=true"
-      - "traefik.http.services.v2-portfolio-website.loadbalancer.server.port=3000"
-     
+      - 'traefik.http.routers.v2-portfolio-website.rule=Host(`v2.iliyandimitrov.com`)'
+      - 'traefik.http.routers.v2-portfolio-website.entrypoints=websecure'
+      - 'traefik.http.routers.v2-portfolio-website.tls=true'
+      - 'traefik.http.services.v2-portfolio-website.loadbalancer.server.port=3000'
+
     networks:
       - traefik_default
 networks:
